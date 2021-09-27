@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Content from "./Content";
+import { useState, useContext } from "react";
+import { contentContext } from "./Context";
 
 export default function PassphraseForm() {
   const [password, setPassword] = useState("");
-  const [wasClicked, setWasClicked] = useState(false);
+  const { validation, setValidation } = useContext(contentContext);
 
   const passwordHandler = (e) => {
     e.preventDefault();
@@ -11,13 +11,15 @@ export default function PassphraseForm() {
     setPassword(value);
   };
   const sendPassword = () => {
-    setWasClicked(!wasClicked);
+    if (password === process.env.REACT_APP_SECRET_CODE) {
+      setPassword("");
+      setValidation(!validation);
+    }
   };
   return (
     <div>
       <input type="password" onChange={passwordHandler} value={password} />
       <button onClick={sendPassword}>Check password</button>
-      <Content passwordFromUser={password} clicked={wasClicked} />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.nav {
+  display: grid;
+  place-content: center;
+}
+
+.mobile,
+.desktop {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile li,
+.desktop li {
+  padding: 1em;
+}
+
+.mobile li svg,
+.desktop li svg {
+  width: 2em;
+  height: 2em;
+}
