@@ -14,5 +14,5 @@ export default function UseMobile() {
     };
   }, [windowWidth]);
 
-  return windowWidth<1024 ? true : false;
+  return windowWidth;
 }

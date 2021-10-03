@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: #a5a58d;
+  padding: 1em;
+  display: grid;
+  place-content: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.listElements{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.views {
+  color: #A5A58D;
+}

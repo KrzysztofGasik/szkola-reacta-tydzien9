@@ -1,14 +1,16 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import PassphraseForm from "./PassphraseForm";
 import Content from "./Content";
-import { contentContext } from "./Context";
+import PasswordContext from "./PasswordContext";
 
 export default function Wrapper() {
-  const [validation,setValidation] = useState(false);
+  const [isValid,setIsValid] = useState(false)
   return (
-    <contentContext.Provider value={{validation,setValidation}}>
+    <PasswordContext.Provider
+      value={{isValid,setIsValid}}
+    >
       <PassphraseForm />
       <Content />
-    </contentContext.Provider>
+    </PasswordContext.Provider>
   );
 }

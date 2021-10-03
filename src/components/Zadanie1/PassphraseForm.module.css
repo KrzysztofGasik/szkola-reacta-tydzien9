@@ -1,0 +1,33 @@
+.form {
+  background-color: #cb997e;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.label {
+  color: #fff;
+  font-weight: bold;
+}
+
+.input {
+  border: 2px solid #6b705c;
+  padding: 1em;
+  background-color: #ddbea9;
+  outline: none;
+}
+
+.button {
+  background-color: #ffe8d6;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #eed7c5;
+  color: #333;
+}

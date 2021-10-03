@@ -1,11 +1,12 @@
-import { useContext } from "react";
-import { contentContext } from "./Context";
+import React, { useContext } from "react";
+import PasswordContext from "./PasswordContext";
+import classes from "./Content.module.css"
 
 export default function Content() {
-  const {validation} = useContext(contentContext)
+  const context = useContext(PasswordContext);
   return (
-    <div>
-      {validation && <h1>Welcome, you know the secret password!</h1>}
+    <div className={classes.wrapper}>
+      {context.isValid && <h1 className={classes.heading}>Welcome, you know the secret password!</h1>}
     </div>
-  )
+  );
 }

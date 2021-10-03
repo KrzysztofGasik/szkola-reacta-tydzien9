@@ -1,6 +1,12 @@
 .nav {
   display: grid;
   place-content: center;
+  background-color: #6B705C;
+}
+
+.nav p {
+  text-align: center;
+  color: #fff;
 }
 
 .mobile,
@@ -20,4 +26,5 @@
 .desktop li svg {
   width: 2em;
   height: 2em;
+  color: #fff;
 }
