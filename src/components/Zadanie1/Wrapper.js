@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import PassphraseForm from "./PassphraseForm";
 import Content from "./Content";
-import PasswordContext from "./PasswordContext";
 
 export default function Wrapper() {
-  const [isValid,setIsValid] = useState(false)
   return (
-    <PasswordContext.Provider
-      value={{isValid,setIsValid}}
-    >
+    <React.Fragment>
       <PassphraseForm />
       <Content />
-    </PasswordContext.Provider>
+    </React.Fragment>
   );
 }
