@@ -20,7 +20,7 @@ export default function PassphraseForm() {
   };
   return (
     <div className={classes.form}>
-      <label htmlFor="password" className={classes.label}>Type your password</label>
+      <label htmlFor="password" className={classes.label}>Type your password (hint - check .env file)</label>
       <input type="password" name="password" onChange={passwordHandler} value={password} className={classes.input}/>
       <button onClick={sendPassword} className={classes.button}>Check password</button>
     </div>
